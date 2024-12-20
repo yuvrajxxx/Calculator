@@ -1,0 +1,87 @@
+/* Body background */
+body {
+    background: linear-gradient(to right, #84acfb, #d9d9d9);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Calculator Box */
+  .calculator-box {
+    background-color: rgb(69, 69, 69);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    padding: 20px;
+    border-radius: 20px; 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Input field */
+  .result input {
+    background-color: rgb(224, 224, 224);
+    margin: 20px auto;
+    padding: 0 10px;
+    width: 90%;
+    max-width: 300px;
+    text-align: right;
+    font-size: 2rem;
+    height: 60px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(45, 45, 45);
+  }
+  
+  /* Button Grid */
+  .input {
+    margin: 0px auto 20px auto;
+    width: 90%;
+    max-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+  }
+  
+  /* Button Style */
+  .input button {
+    color: white;
+    background-color: #6a6a6a;
+    height: 70px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 100%;
+    box-shadow: 5px 5px 10px rgb(45, 45, 45);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .input button:hover {
+    background-color: #9a9a9a; 
+    transform: scale(1.01);
+    cursor: pointer;
+  }
+  
+  .input button:active {
+    background-color: #4a4a4a;
+    transform: scale(0.98);
+    box-shadow: 2px 2px 5px rgb(45, 45, 45);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 400px) {
+    .calculator-box {
+      width: 90%; /* Fit within smaller screen */
+    }
+    .result input, .input button {
+      font-size: 1.2rem;
+    }
+  }  
